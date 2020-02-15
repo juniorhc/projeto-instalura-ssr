@@ -29,7 +29,9 @@ export default class Login extends Component {
             })
             .then(token => {
                 localStorage.setItem('auth-token',token);
-                document.cookie = `auth-token=${token}`;
+                document.cookie = `auth-token=${token}`; 
+                //LocalStorage is not universal but cookie is
+                //document is load in the client side. 
                 browserHistory.push('/timeline');
             })
             .catch(error => {

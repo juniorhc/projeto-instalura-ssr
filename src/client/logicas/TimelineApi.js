@@ -57,7 +57,7 @@ export default class TimelineApi {
 
     static pesquisa(login){
       return dispatch => {
-        fetch(`https://instalura-api.herokuapp.com/api/public/fotos/${login}`)
+        fetch(`https://instalura-api.herokuapp.com/Oapi/public/fotos/${login}`)
           .then(response => response.json())
           .then(fotos => {
             if(fotos.length === 0){
