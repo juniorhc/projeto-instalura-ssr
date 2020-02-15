@@ -23,7 +23,7 @@ export default class TimelineApi {
           })
         };
 
-        fetch(`http://localhost:8080/api/fotos/${fotoId}/comment?X-AUTH-TOKEN=${localStorage.getItem('auth-token')}`,requestInfo)
+        fetch(`https://instalura-api.herokuapp.com/api/fotos/${fotoId}/comment?X-AUTH-TOKEN=${localStorage.getItem('auth-token')}`,requestInfo)
           .then(response => {
             if(response.ok){
               return response.json();
@@ -40,7 +40,7 @@ export default class TimelineApi {
 
     static like(fotoId){
       return dispatch => {
-        fetch(`http://localhost:8080/api/fotos/${fotoId}/like?X-AUTH-TOKEN=${localStorage.getItem('auth-token')}`,{method:'POST'})
+        fetch(`https://instalura-api.herokuapp.com/api/fotos/${fotoId}/like?X-AUTH-TOKEN=${localStorage.getItem('auth-token')}`,{method:'POST'})
           .then(response => {
             if(response.ok) {
               return response.json();
@@ -57,7 +57,7 @@ export default class TimelineApi {
 
     static pesquisa(login){
       return dispatch => {
-        fetch(`http://localhost:8080/api/public/fotos/${login}`)
+        fetch(`https://instalura-api.herokuapp.com/api/public/fotos/${login}`)
           .then(response => response.json())
           .then(fotos => {
             if(fotos.length === 0){
