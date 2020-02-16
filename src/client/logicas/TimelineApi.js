@@ -1,5 +1,5 @@
 import {listagem,comentario,like,notifica} from '../actions/actionCreator';
-import 'isomorphic-fetch';
+import 'isomorphic-fetch'; //only import isoimorphic-fetch is enoughy to make the fetch global(node and serverside)
 
 export default class TimelineApi {
     static lista(urlPerfil){
