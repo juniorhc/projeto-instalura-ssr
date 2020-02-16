@@ -33,7 +33,7 @@ function createReduxStore(req, match) { // eslint-disable-line
 
 module.exports = (req) => {
   const app = req.server && req.server.app || req.app;
-  if (!app.routesEngine) {
+  if (!app.routesEngine) { //requisition on server side
     app.routesEngine = new ReduxRouterEngine({routes, createReduxStore});
   }
 

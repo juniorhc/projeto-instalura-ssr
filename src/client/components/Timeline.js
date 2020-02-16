@@ -52,7 +52,7 @@ class Timeline extends Component {
 }
 
 const mapStateToProps = state => {
-  return {fotos : state.timeline}
+  return {fotos : state.timeline} //now we going to build it on the server side. not going to be build in front side anymore
 };
 
 const mapDispatchToProps = dispatch => {
